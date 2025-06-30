@@ -386,7 +386,7 @@ async fn send_token(req: web::Json<SendTokenRequest>) -> Result<HttpResponse> {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-        env_logger::init();
+    env_logger::init();
 
     println!("🚀 Starting Solana HTTP Server on http://localhost:8080");
 
@@ -409,7 +409,5 @@ async fn main() -> std::io::Result<()> {
     })
     .bind("127.0.0.1:8080")?
     .run()
-    .await 
-
-    
+    .await
 }
